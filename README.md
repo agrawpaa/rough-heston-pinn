@@ -81,10 +81,6 @@ rough_heston_pinn/
 tests/                     simulator tests (NumPy) and PINN tests (PyTorch)
 ```
 
-## Results
-
-Add your own run here after you execute the synthetic experiment, for example the parameter-recovery table printed by `main.py` and the `smile_fit.png` figure from `results/`. Report the seed, number of paths, and noise level next to the numbers.
-
 ## Limitations
 
 - **Closure accuracy.** The Gaussian projection is first order in ν. It captures the level and the H-dependent skew but not smile curvature from vol-of-vol, and σ²_loc can turn negative far out of the money at short maturities, where a smooth positive floor is applied. Calibrated parameters on strongly curved surfaces will be biased toward whatever matches the skew.
@@ -104,7 +100,3 @@ Add your own run here after you execute the synthetic experiment, for example th
 - Dupire (1994), *Pricing with a smile*. Gyöngy (1986), *Mimicking the one-dimensional marginal distributions of processes having an Itô differential*.
 - Gatheral and Jacquier (2014), *Arbitrage-free SVI volatility surfaces*.
 - Raissi, Perdikaris and Karniadakis (2019), *Physics-informed neural networks*.
-
-## License
-
-MIT
